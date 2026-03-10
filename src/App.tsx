@@ -60,12 +60,22 @@ function App() {
         
         {dogImage && (
           <div className="dog-container">
-            <img src={dogImage} alt="Random dog" className="dog-image" />
+            <img
+              id="dog-image"
+              src={dogImage}
+              alt="Random dog"
+              className="dog-image"
+            />
           </div>
         )}
       </div>
       
-      <button onClick={fetchDogImage} disabled={loading} className="fetch-button">
+      <button
+        id="get-dog"
+        onClick={fetchDogImage}
+        disabled={loading}
+        className="fetch-button"
+      >
         {loading ? 'Loading...' : 'Get Another Dog'}
       </button>
     </div>
